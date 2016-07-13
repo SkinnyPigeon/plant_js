@@ -9,8 +9,8 @@ var Cell = function() {
         if(molecule.type === "chlorophyll" ||
           molecule.type === "water" ||
           molecule.type === "CO2")  {
-          this.lifeCell.push( molecule )
-          this.lifeCell.uniq;
+          this.lifeCell.push( molecule );
+          _.uniq( this.lifeCell );
       }
     }
   }

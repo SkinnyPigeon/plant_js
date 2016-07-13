@@ -1,5 +1,7 @@
 var Molecule = require('../molecule');
 var Cell = require('../cell');
+
+var _ = require('lodash');
 var assert = require('chai').assert;
 
 
@@ -21,6 +23,7 @@ describe( 'Cell Test', function(){
 
   it( "Should start preparation", function() {
     basicCell.build( chlorophyll );
+    basicCell.build( chlorophyll );
     basicCell.prepare();
     assert.equal( 1, basicCell.lifeCell.length )
   })
@@ -31,10 +34,10 @@ describe( 'Cell Test', function(){
     assert.equal( 0, basicCell.lifeCell.length )
   })
 
-  
 
 
-  
+
+
 })
 
 
