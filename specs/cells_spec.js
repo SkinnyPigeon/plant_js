@@ -9,6 +9,7 @@ describe( 'Cell Test', function(){
     chlorophyll = new Molecule( "chlorophyll" );
     water = new Molecule( "water" );
     co2 = new Molecule( "CO2" );
+    no2 = new Molecule( "NO2" );
 
     basicCell = new Cell();
   } )
@@ -21,6 +22,12 @@ describe( 'Cell Test', function(){
   it( "Should start preparation", function() {
     basicCell.build( chlorophyll );
     basicCell.prepare();
-    assert.equal( 1, basicCell.lifeCell.length)
+    assert.equal( 1, basicCell.lifeCell.length )
+  })
+
+  it( "Should not take foreign cells", function() {
+    basicCell.build( no2 );
+    basicCell.prepare();
+    assert.equal( 0, basicCell.lifeCell.length )
   })
 })
