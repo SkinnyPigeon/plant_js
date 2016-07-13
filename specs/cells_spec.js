@@ -14,9 +14,13 @@ describe( 'Cell Test', function(){
   } )
 
   it( 'Has Cholorphyll', function() {
-    basicCell.build( chlorophyll ) 
+    basicCell.build( chlorophyll );
     assert.equal( "chlorophyll", basicCell.molecules[0].type );
   })
 
-  // it( "Would react with light")
+  it( "Should start preparation", function() {
+    basicCell.build( chlorophyll );
+    basicCell.prepare();
+    assert.equal( 1, basicCell.lifeCell.length)
+  })
 })
