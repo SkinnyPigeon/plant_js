@@ -30,4 +30,25 @@ describe( 'Cell Test', function(){
     basicCell.prepare();
     assert.equal( 0, basicCell.lifeCell.length )
   })
+
+  
+
+
+  
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

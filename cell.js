@@ -10,6 +10,7 @@ var Cell = function() {
           molecule.type === "water" ||
           molecule.type === "CO2")  {
           this.lifeCell.push( molecule )
+          this.lifeCell.uniq;
       }
     }
   }
