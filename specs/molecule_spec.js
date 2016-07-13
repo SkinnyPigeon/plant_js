@@ -5,9 +5,12 @@ var assert = require('chai').assert;
 describe( 'Molecule Test', function(){
 
   beforeEach( function() {
-    chlorophyl = new Molecule( "chlorophyl" )
+    chlorophyll = new Molecule( "chlorophyll" );
+    water = new Molecule( "water" );
+    co2 = new Molecule( "CO2" );
   } )
-  it( 'Has Chlorophyl', function() { 
-    assert.equal( "chlorophyl", chlorophyl.type );
+  
+  it( 'Has Chlorophyll', function() { 
+    assert.equal( "chlorophyll", chlorophyll.type );
   })
 })

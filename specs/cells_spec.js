@@ -1,13 +1,16 @@
-var Cell = require('../cells');
+var Molecule = require('../molecule');
+var Cell = require('../cell');
 var assert = require('chai').assert;
 
 
-describe( 'Link Test', function(){
+describe( 'Cell Test', function(){
 
   beforeEach( function() {
-    basic = new Cell()
+    chlorophyll = new Molecule( "chlorophyll" );
+    basic = new Cell( chlorophyll )
   } )
-  it( 'Say hello', function() { 
-    assert.equal( "Hello Master", basic.welcome() );
+
+  it( 'Has Cholorphyll', function() { 
+    assert.equal( "chlorophyll", basic.molecule.type );
   })
 })
