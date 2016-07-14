@@ -1,3 +1,6 @@
+var _ = require('lodash');
+
+
 var Cell = function() {
   this.molecules = [];
   this.build = function( molecule ) {
@@ -10,11 +13,10 @@ var Cell = function() {
           molecule.type === "water" ||
           molecule.type === "CO2")  {
           this.lifeCell.push( molecule );
-
-          // _.uniq( this.lifeCell );
-
       }
     }
+  this.lifeCell = _.uniq( this.lifeCell )
+  return this.lifeCell;
   }
   this.ready = function() {
     if( this.lifeCell.length === 3 ){
