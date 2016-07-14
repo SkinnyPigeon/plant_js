@@ -14,6 +14,7 @@ describe( 'Cell Test', function(){
     no2 = new Molecule( "NO2" );
 
     basicCell = new Cell();
+    basicCell.lifeCell = [];
   } )
 
   it( 'Has Cholorphyll', function() {
@@ -23,7 +24,7 @@ describe( 'Cell Test', function(){
 
   it( "Should start preparation", function() {
     basicCell.build( chlorophyll );
-    basicCell.build( chlorophyll );
+    // basicCell.build( chlorophyll );
     basicCell.prepare();
     assert.equal( 1, basicCell.lifeCell.length )
   })
@@ -34,6 +35,17 @@ describe( 'Cell Test', function(){
     assert.equal( 0, basicCell.lifeCell.length )
   })
 
+  it( "Should not be ready to live", function() {
+    assert.equal( false, basicCell.ready() )
+  })
+
+  it( "Should be ready to live", function() {
+    basicCell.build( chlorophyll );
+    basicCell.build( water );
+    basicCell.build( co2 );
+    basicCell.prepare(); 
+    assert.equal( true, basicCell.ready() )
+  })
 
 
 

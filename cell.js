@@ -10,10 +10,20 @@ var Cell = function() {
           molecule.type === "water" ||
           molecule.type === "CO2")  {
           this.lifeCell.push( molecule );
-          _.uniq( this.lifeCell );
+
+          // _.uniq( this.lifeCell );
+
       }
     }
   }
+  this.ready = function() {
+    if( this.lifeCell.length === 3 ){
+      return true
+    } else {
+      return false
+    }
+  }
+
 }
 
 module.exports = Cell;
